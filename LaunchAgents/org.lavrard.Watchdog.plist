@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>org.lavrard.Watchdog</string>
+
+	<!-- Relative to the app bundle, so this keeps working wherever Watchdog.app lives.
+	     A plain Program/ProgramArguments path would hard-code wherever it was when registered. -->
+	<key>BundleProgram</key>
+	<string>Contents/MacOS/Watchdog</string>
+
+	<key>RunAtLoad</key>
+	<true/>
+
+	<!-- Restart Watchdog if it dies — but only if it died badly. A clean exit (the Quit menu item)
+	     stays quit; plain `KeepAlive: true` would relaunch it within seconds and make Quit a lie. -->
+	<key>KeepAlive</key>
+	<dict>
+		<key>SuccessfulExit</key>
+		<false/>
+	</dict>
+
+	<!-- It draws a menu bar item, so it belongs in the GUI session, not a background context. -->
+	<key>LimitLoadToSessionType</key>
+	<string>Aqua</string>
+	<key>ProcessType</key>
+	<string>Interactive</string>
+</dict>
+</plist>

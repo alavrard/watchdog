@@ -1,0 +1,25 @@
+# macOS
+.DS_Store
+
+# Xcode build output
+build/
+DerivedData/
+
+# Xcode per-user state — window positions, breakpoints, which scheme you last picked.
+# Nothing another machine wants, and a constant source of pointless diffs.
+xcuserdata/
+*.xcuserstate
+*.xcscmblueprint
+*.xccheckout
+*.moved-aside
+*.hmap
+*.dSYM
+*.dSYM.zip
+
+# Swift Package Manager
+.build/
+.swiftpm/
+Packages/
+
+# Claude Code local state
+.claude/
