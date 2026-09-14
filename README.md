@@ -123,3 +123,7 @@ target automatically — `project.pbxproj` never needs hand-editing.
 
 `CLAUDE.md` in the repo root documents the design decisions and the several ways this app can be
 broken by an innocent-looking change; worth reading before touching `AppWatcher`.
+
+## License
+
+[MIT](LICENSE) — do what you like with it.
